@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --color-ink: #071426;
+  --color-navy: #0a1b30;
+  --color-blueprint: #0c65d8;
+  --color-signal: #3b9cff;
+  --color-steel: #66778d;
+  --color-mist: #f2f5f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+  color: #071426;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a,
+input,
+textarea {
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #0c65d8;
+  color: white;
+}
+
+.technical-grid {
+  background-image:
+    linear-gradient(rgba(12, 101, 216, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 101, 216, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.hero-mask {
+  background:
+    linear-gradient(90deg, #071426 0%, rgba(7, 20, 38, 0.96) 35%, rgba(7, 20, 38, 0.5) 70%, rgba(7, 20, 38, 0.12) 100%),
+    linear-gradient(0deg, #071426 0%, transparent 28%);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  margin-right: 12px;
+  background: #0c65d8;
+  vertical-align: middle;
+}
+
+.card-cut {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
