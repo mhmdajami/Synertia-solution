@@ -274,7 +274,7 @@ export default function App() {
 
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
-  }, []);
+}, [language]);
 
   const selectLanguage = (value) => {
     setLanguage(value);
